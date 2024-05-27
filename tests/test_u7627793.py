@@ -1,6 +1,7 @@
 import pytest
 
-from cogent3 import make_unaligned_seqs, load_unaligned_seqs
+from cogent3 import load_unaligned_seqs, make_unaligned_seqs
+
 from u7627793.cli import unique_kmers
 
 
@@ -29,7 +30,8 @@ def test_find_unique_kmers_three_sequences():
 
     result = unique_kmers(sequences, kmer_size)
     assert result == expected_result
-    
+
+
 def test_find_unique_kmers_fasta():
     path = "tests/data/sample.fasta"
     kmer_size = 2
